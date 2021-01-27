@@ -1433,7 +1433,7 @@ sub init_random_objects {
 	);
 	# reduce random events by adding null events that will decrease the percentage
 	if (($special_event_probability gt 0) && ($special_event_probability lt 1)) {
-			my $event_size = @event_list;
+		my $event_size = @event_list;
 		for (1..(int($event_size/$special_event_probability)-$event_size)) {
 			push(@event_list, \&add_null_event)
 		}
